@@ -7,7 +7,7 @@ const forecast = (latitude, longitude, callback) => {
     ", " +
     longitude;
 
-  request({ url, json: true }, (error, {body}) => {
+  request({ url, json: true }, (error, { body }) => {
     if (error) {
       callback("Unable to connect to weather server", undefined);
     } else if (body.error) {
@@ -15,10 +15,12 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        "it's " +
+        "It's " +
           body.current.feelslike_c +
           " celsis, the weather is " +
-          body.current.condition.text
+          body.current.condition.text +
+          ", relative humidity of " +
+          body.current.humidity
       );
     }
   });
