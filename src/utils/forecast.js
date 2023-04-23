@@ -23,6 +23,6 @@ const forecast = (latitude, longitude, callback) => {
           body.current.humidity
       );
     }
-  });
+  });   
 };
 module.exports = forecast;
