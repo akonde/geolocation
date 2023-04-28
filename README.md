@@ -1,2 +1,2 @@
 # geolocation
-# this is an geolocator API, it allows users to search any location weather reports.
+# This is a geolocator API, it allows user to search any location weather reports.
